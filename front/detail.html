@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneViewOneReason</title>
+    <link href="bootstrap\css\bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="list.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <!-- 광고 -->
+          </div>
+
+          <div class="col-12">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">일견일리</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            차트
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">비트코인 - 기본</a></li>
+                            <li><a class="dropdown-item" href="#">이더리움 - 기본</a></li>
+                            <li><a class="dropdown-item" href="#">리플 - 기본</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">비트코인 - 기술적지표</a></li>
+                            <li><a class="dropdown-item" href="#">이더리움 - 기술적지표</a></li>
+                            <li><a class="dropdown-item" href="#">리플 - 기술적지표</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          분석
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">기술적분석</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">기본적분석</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            전략
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">고수의 전략</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          프로그래밍
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">파이썬</a></li>
+                          <li><a class="dropdown-item" href="#">크롤링</a></li>
+                          <li><a class="dropdown-item" href="#">자동화</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+            </nav>
+        
+          </div>
+          <div class="col">
+            <!-- 광고 -->
+          </div>
+        </div>
+      </div>
+
+
+    <div class="mt-4">
+        <!-- 공백 -->
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- 제목 -->
+                <h1>글의 제목</h1>
+                
+                <!-- 작성자와 날짜 -->
+                <p>작성자: John Doe</p>
+                <p>날짜: 2023년 9월 24일</p>
+                
+                <!-- 글의 내용 -->
+                <div class="card">
+                    <div class="card-body">
+                        <p>글의 내용을 여기에 작성합니다.</p>
+                    </div>
+                </div>
+                
+                <!-- 댓글창 -->
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h3>댓글</h3>
+
+                        <div class="mt-4">
+                            <!-- 공백 -->
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                        </div>
+
+                        <div class="mt-4">
+                            <!-- 공백 -->
+                        </div>
+
+                        <!-- 댓글 작성 버튼 -->
+                        <button type="submit" class="btn btn-dark" id="addComment">댓글 작성</button>
+
+                    </div>
+                </div>
+                
+                <!-- 댓글 목록 -->
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <h3>댓글 목록</h3>
+                        <ul class="list-group" id="commentList">
+                            <!-- 댓글 목록은 JavaScript로 동적으로 추가됩니다. -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 부트스트랩 JS 및 Popper.js 및 jQuery 링크 추가 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // 댓글 목록 데이터
+        const comments = [
+            { author: 'User1', content: '댓글 내용 1' },
+            { author: 'User2', content: '댓글 내용 2' },
+            { author: 'User3', content: '댓글 내용 3' }
+        ];
+        
+        // 댓글 목록을 동적으로 생성
+        function renderComments() {
+            const commentList = document.getElementById('commentList');
+            commentList.innerHTML = '';
+            comments.forEach((comment) => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('list-group-item');
+                listItem.innerHTML = `<strong>${comment.author}</strong>: ${comment.content}`;
+                commentList.appendChild(listItem);
+            });
+        }
+        
+        // 댓글 추가 버튼 클릭 시 댓글을 추가하고 목록을 업데이트
+        const addCommentButton = document.getElementById('addComment');
+        addCommentButton.addEventListener('click', () => {
+            const commentText = document.getElementById('comment').value;
+            const author = 'New User'; // 신규 댓글의 작성자 (변경 가능)
+            comments.push({ author, content: commentText });
+            renderComments();
+            // 댓글 입력 필드 초기화
+            document.getElementById('comment').value = '';
+        });
+        
+        // 초기 댓글 목록 렌더링
+        renderComments();
+    </script>
+    
+
+    <div class="container">
+        <div class="col">
+            <!-- col -->
+        </div>
+        <div class="col-12">
+
+            <div class="container mt-5">
+                <h1>글 목록</h1>
+                
+                <!-- 글 목록을 테이블 형식으로 표시 -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">날짜</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#">첫 번째 글</a></td>
+                            <td>작성자 1</td>
+                            <td>2023-09-24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><a href="#">두 번째 글</a></td>
+                            <td>작성자 2</td>
+                            <td>2023-09-25</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#">세 번째 글</a></td>
+                            <td>작성자 3</td>
+                            <td>2023-09-26</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#">첫 번째 글</a></td>
+                            <td>작성자 1</td>
+                            <td>2023-09-24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><a href="#">두 번째 글</a></td>
+                            <td>작성자 2</td>
+                            <td>2023-09-25</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#">세 번째 글</a></td>
+                            <td>작성자 3</td>
+                            <td>2023-09-26</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><a href="#">첫 번째 글</a></td>
+                            <td>작성자 1</td>
+                            <td>2023-09-24</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td><a href="#">두 번째 글</a></td>
+                            <td>작성자 2</td>
+                            <td>2023-09-25</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#">세 번째 글</a></td>
+                            <td>작성자 3</td>
+                            <td>2023-09-26</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td><a href="#">세 번째 글</a></td>
+                            <td>작성자 3</td>
+                            <td>2023-09-26</td>
+                        </tr>
+                        <!-- 다른 글 목록 항목들도 유사한 방식으로 추가 가능 -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-4">
+                <!-- 공백 -->
+            </div>
+
+            <!-- 페이지네이션 -->
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+        <div class="col">
+            <!-- col -->
+        </div>
+    </div>
+
+
+    
+    <div class="container text-center">
+        <div class="col">
+            <!-- col -->
+        </div>
+        <div class="col">
+    <!-- 부트스트랩을 사용한 footer -->
+        <footer class="bg-dark text-white text-center py-3">
+            <p>&copy; 2023 One View One Reason</p>
+            <p>Copyright (c) oneviewonereason.com All Right Reserved.</p>
+            <p>Contact us, 새로운 이메일 만들기</p>
+        </footer>
+        </div>
+        <div class="col">
+            <!-- col -->
+        </div>
+    </div>
+
+
+    <script src="bootstrap\js\bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
